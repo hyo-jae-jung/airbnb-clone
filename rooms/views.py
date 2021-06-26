@@ -1,4 +1,4 @@
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 from . import models
 
 
@@ -11,3 +11,8 @@ class HomeView(ListView):
     ordering = "created"
     paginate_orphans = 5
     context_object_name = "rooms"
+
+
+class RoomDetail(DetailView):
+
+    model = models.Room
