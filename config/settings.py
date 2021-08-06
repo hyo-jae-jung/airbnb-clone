@@ -54,7 +54,7 @@ PROJECT_APPS = [
     "conversations.apps.ConversationsConfig",
 ]
 
-INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + PROJECT_APPS
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -64,6 +64,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "django.middleware.locale.LocaleMiddleware",
 ]
 
 ROOT_URLCONF = "config.urls"
@@ -159,3 +160,10 @@ EMAIL_FROM = "sexy-guy@sandbox74733981a87a4233851bd9cedf56c6fd.mailgun.org"
 # Auth
 
 LOGIN_URL = "/users/login/"
+
+
+# Locale
+LOCALE_PATHS = (os.path.join(BASE_DIR, "locale"),)
+
+# Language
+LANGUAGE_COOKIE_NAME = "django_language"
