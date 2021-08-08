@@ -26,7 +26,7 @@ SECRET_KEY = "#pss5h+ps0@p=&^l))7)plt00)*wt%qtq+_&g!lxa*7c6ae%k3"
 DEBUG = bool(os.environ.get("DEBUG"))
 
 ALLOWED_HOSTS = [
-    'airbnb-clone.eba-6tgpdecm.ap-northeast-2.elasticbeanstalk.com']
+    'django-airbnb-clone.eba-sr6k7wpx.ap-northeast-2.elasticbeanstalk.com']
 
 
 # Application definition
